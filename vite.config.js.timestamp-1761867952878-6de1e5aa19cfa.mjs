@@ -1,0 +1,16 @@
+// vite.config.js
+import { defineConfig } from "file:///Users/egiere/workCisco/JDS-widget-embed/cjds-widget-app/node_modules/vite/dist/node/index.js";
+import preact from "file:///Users/egiere/workCisco/JDS-widget-embed/cjds-widget-app/node_modules/@preact/preset-vite/dist/esm/index.mjs";
+var vite_config_default = defineConfig({
+  plugins: [preact()],
+  preview: {
+    port: 8889,
+    // <-- sets the preview port
+    host: true
+    // optional: allows access from network
+  }
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcuanMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCIvVXNlcnMvZWdpZXJlL3dvcmtDaXNjby9KRFMtd2lkZ2V0LWVtYmVkL2NqZHMtd2lkZ2V0LWFwcFwiO2NvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9maWxlbmFtZSA9IFwiL1VzZXJzL2VnaWVyZS93b3JrQ2lzY28vSkRTLXdpZGdldC1lbWJlZC9jamRzLXdpZGdldC1hcHAvdml0ZS5jb25maWcuanNcIjtjb25zdCBfX3ZpdGVfaW5qZWN0ZWRfb3JpZ2luYWxfaW1wb3J0X21ldGFfdXJsID0gXCJmaWxlOi8vL1VzZXJzL2VnaWVyZS93b3JrQ2lzY28vSkRTLXdpZGdldC1lbWJlZC9jamRzLXdpZGdldC1hcHAvdml0ZS5jb25maWcuanNcIjtpbXBvcnQgeyBkZWZpbmVDb25maWcgfSBmcm9tIFwidml0ZVwiO1xuaW1wb3J0IHByZWFjdCBmcm9tIFwiQHByZWFjdC9wcmVzZXQtdml0ZVwiO1xuXG5leHBvcnQgZGVmYXVsdCBkZWZpbmVDb25maWcoe1xuICBwbHVnaW5zOiBbcHJlYWN0KCldLFxuICBwcmV2aWV3OiB7XG4gICAgcG9ydDogODg4OSwgLy8gPC0tIHNldHMgdGhlIHByZXZpZXcgcG9ydFxuICAgIGhvc3Q6IHRydWUsIC8vIG9wdGlvbmFsOiBhbGxvd3MgYWNjZXNzIGZyb20gbmV0d29ya1xuICB9LFxufSk7XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQTBWLFNBQVMsb0JBQW9CO0FBQ3ZYLE9BQU8sWUFBWTtBQUVuQixJQUFPLHNCQUFRLGFBQWE7QUFBQSxFQUMxQixTQUFTLENBQUMsT0FBTyxDQUFDO0FBQUEsRUFDbEIsU0FBUztBQUFBLElBQ1AsTUFBTTtBQUFBO0FBQUEsSUFDTixNQUFNO0FBQUE7QUFBQSxFQUNSO0FBQ0YsQ0FBQzsiLAogICJuYW1lcyI6IFtdCn0K

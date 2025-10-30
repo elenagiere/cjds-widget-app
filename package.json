@@ -1,0 +1,25 @@
+{
+  "name": "cjds-widget-app",
+  "private": true,
+  "version": ".0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:watch": "npm run dev -- --port 8889",
+    "build": "vite build",
+    "start": "vite preview -- --port 8889"
+  },
+  "dependencies": {
+    "preact": "^10.27.2"
+  },
+  "devDependencies": {
+    "@momentum-ui/core": "19.16.0",
+    "@momentum-ui/icons": "8.28.5",
+    "@momentum-ui/utils": "6.2.15",
+    "@momentum-ui/web-components": "2.23.16",
+    "@preact/preset-vite": "^2.10.2",
+    "mobx": "^6.0.1",
+    "vite": "^4.5.3"
+  }
+}
+
