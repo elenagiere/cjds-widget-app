@@ -18,6 +18,73 @@ Standalone CJDS widget App
 4. Populate the .env file with the values
 5. `npm run dev:watch`
 
+## Key CJDS Widget Dependencies
+1. `index.html`: Add the following code to the <head> section of your root index.html file
+```
+    <script src="https://journey-widget.webex.com/finesse/customer-journey.js"></script>
+    <script src="https://journey-widget.webex.com/finesse/customer-journey-wrapper.js"></script>
+    <script src="https://journey-widget.webex.com/finesse/customer-journey-bootstrap.js"></script>
+
+    <link rel="stylesheet" href="https://journey-widget.webex.com/finesse/css/momentum-ui.min.css" />
+    <link rel="stylesheet" href="https://journey-widget.webex.com/finesse/css/momentum-ui-icons.min.css" />
+
+    <script>
+        let AGENTX_SERVICE = {};
+    </script>
+
+    <!-- Load your widget bundle -->
+    <script type="module" src="https://journey-widget.webex.com"></script>
+```
+2. `package.json`: Ensure you have the following npm packages in your package.json
+```
+  "devDependencies": {
+    "@momentum-ui/core": "19.16.0",
+    "@momentum-ui/icons": "8.28.5",
+    "@momentum-ui/utils": "6.2.15",
+    "@momentum-ui/web-components": "2.23.16",
+    "@preact/preset-vite": "^2.10.2",
+    "mobx": "^6.0.1",
+    "vite": "^4.5.3"
+  }
+```
+3. `app.jsx`: In your main javascript file, ensure you are importing the momentum-ui/web-components. Add pass in required variables into the <customer-journey-widget>.
+```
+import "@momentum-ui/web-components";
+```
+CJDS variables passed in
+```
+<customer-journey-widget
+                condensed-view
+                show-alias-icon
+                use-new-momentum-icons
+                is-visual-rebrand-enabled
+                is-momentum-v2-enabled
+                bearerToken={bearerToken}
+                organizationId={organizationId}
+                projectId={projectId}
+                templateId={templateId}
+                dataCenter={dataCenter}
+                interactionData={mockedInteractionData("INBOUND", identity)}>
+</customer-journey-widget>
+```
+4. `app.css`: Make sure the md-theme and div containers around the widget have proper height and widths
+```
+#app {
+    height: 88vh;
+    padding: 1rem;
+}
+
+md-theme {
+    width: 100%;
+    height: 100%;
+}
+
+.widget-container {
+    border: 1px solid #ccc;
+    height: 100%;
+}
+```
+
 ## Env Variable Guide
 
 1. DATA_CENTER
