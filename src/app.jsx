@@ -1,4 +1,3 @@
-import { useState } from 'preact/hooks'
 import './styles/app.css';
 import { mockedInteractionData } from './assets/interaction.mock';
 import "@momentum-ui/web-components";
@@ -11,8 +10,6 @@ export function App() {
 
   const projectId = import.meta.env.VITE_PROJECT_ID;
   const templateId = import.meta.env.VITE_TEMPLATE_ID;
-
-  const [count, setCount] = useState(0)
 
   return (
     <>
