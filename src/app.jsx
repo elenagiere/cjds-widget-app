@@ -6,9 +6,11 @@ import "@momentum-ui/web-components";
 export function App() {
   const bearerToken = import.meta.env.VITE_BEARER_TOKEN;
   const organizationId = import.meta.env.VITE_ORGANIZATION_ID;
-  const projectId = import.meta.env.VITE_PROJECT_ID;
   const identity = import.meta.env.VITE_IDENTITY;
   const dataCenter = import.meta.env.VITE_DATA_CENTER;
+
+  const projectId = import.meta.env.VITE_PROJECT_ID;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
 
   const [count, setCount] = useState(0)
 
@@ -26,6 +28,7 @@ export function App() {
                 bearerToken={bearerToken}
                 organizationId={organizationId}
                 projectId={projectId}
+                templateId={templateId}
                 dataCenter={dataCenter}
                 interactionData={mockedInteractionData("INBOUND", identity)}>
             </customer-journey-widget>
